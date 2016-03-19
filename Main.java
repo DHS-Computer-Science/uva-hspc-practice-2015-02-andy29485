@@ -9,12 +9,12 @@ public class Main {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
 
-    int nCases = scan.nextInt();
+    int nCases = scan.nextInt(); scan.nextLine();
 
     case_loop:
     for(int i=0; i<nCases; i++) {
-      String in = scan.nextLine();
-      for(char c : in.toCharArray()) {
+      char[] in = scan.nextLine().toCharArray();
+      for(char c : in) {
         if(ROUND.indexOf(c) == -1) {
           System.out.println("NOT ROUNDED");
           continue case_loop;
